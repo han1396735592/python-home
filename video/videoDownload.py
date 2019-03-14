@@ -77,6 +77,6 @@ if __name__ == '__main__':
     path = "./" + title
     if not os.path.exists(path):
         os.makedirs(path)
-    pool = Pool(200)
+    pool = Pool(150)
     pool.map(down_ts_file, [(ts, path) for ts in lsVideoSet])
     buildMp4(path, title)
